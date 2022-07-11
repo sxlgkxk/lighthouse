@@ -1,16 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html class="dark">
 
-<head>
-	<style type="text/css" rel="stylesheet">
-	</style>
+<head class="dark">
+	<title>lighthouse</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="./tailwindcss3.1.4.js"></script>
+	<script>
+		tailwind.config = {
+			darkMode: 'class',
+		}
+	</script>
 </head>
 
-<body>
+<body class="dark:bg-black dark:text-gray-300">
 	<p id="val"></p>
-	<button onclick="lighthouse()">lighthouse</button>
+	<button onclick="lighthouse()" class="border-2 border-blue-400 w-full h-14">lighthouse</button>
 	<script>
-		function lighthouse(){
-			document.getElementById("val").innerHTML = parseInt(Math.random()*100);
+		function lighthouse() {
+			document.getElementById("val").innerHTML = parseInt(Math.random() * 100);
 		}
 	</script>
 </body>
